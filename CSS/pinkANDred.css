@@ -1,0 +1,29 @@
+*{margin:0; padding:0; box-sizing:border-box}
+	body{background:#c00000}
+	
+	header{ color:white; padding:2%; margin-top:1%; font-size:30px; font-family:Arial;}
+	
+	.bobyB{background:white; width:95vw; margin:auto}
+	
+	.menU{width:25vw; position:relative; left:70vw; min-width:150px; margin-top:3%; height:250px}
+	ul{list-style:none; position:relative; top:15px}
+	li{background:#c00000; margin:5%; padding:6px 10px 6px 10px; border-radius:15px 15px; color:white; text-align:center; border:1px solid #c00000;}
+	li:hover{background:white; color:#c00000}
+	.sTyle2{background:white; color:#c00000; font-weight:bold;}
+	
+	.mainT{width:60vw; padding:1% 0 2% 1%; color:#c00000; margin-top:-235px}
+	.mainT p{line-height:1.5;padding:2% 0 1% 0; color:black}
+	.mainT a{color:#c00000; text-decoration:none}
+	.mainT a:hover{text-decoration:underline}
+	
+	.sideB{background:#FFC0CB;color:#c00000; padding:3% 0 3% 2%; width:95vw; margin:auto;}
+	.sideB p{padding:2% 0 0 0}
+	
+	footer{color:white; padding:2%; font-size:12px; line-height:2; margin-bottom:5vw}
+	
+@media only screen and (max-width: 605px){
+	li{white-space: nowrap;}
+	.menU{ left:65vw;}}
+
+@media only screen and (max-width: 480px){
+	.menU{ left:62vw;}}
