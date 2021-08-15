@@ -1,50 +1,103 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Keep-Notes</title>
-	
-	<meta charset="utf-8">	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous"/>
-	<link rel="stylesheet" type="text/css" href="../CSS/KeepNotes.css"/>
+	<title>Challenge-1</title>
+	<link id="pageStyle" rel="stylesheet" type="text/css" href="defualt.css">
 </head>
+
 <body>
 	<header>
-		<i class="fas fa-sticky-note fa-3x">KeeP-NoTes</i>
+		<h1>Welcome to My Homepage</h1>
+		<p>Use the menu to select different Stylesheets</p>
+	</header>
+	<main class="bobyB">
+		<section class="menU"><ul style="cursor:pointer">
+			<li class="sTyle1" onclick="swapStyleSheet('../CSS/blueANDgreen.css')">Stylesheet 1</li>
+			<li class="sTyle2" onclick="swapStyleSheet('../CSS/pinkANDred.css')">Stylesheet 2</li>
+			<li class="sTyle3" onclick="swapStyleSheet('../CSS/greenANDblack.css')">Stylesheet 3</li>
+			<li class="sTyle4" onclick="swapStyleSheet('../CSS/../CSS/darkGreen.css')">Stylesheet 4</li>
+			<li onclick="swapStyleSheet('defualt.css')">No Stylesheet</li>
+		</ul></section>
+		<section class="mainT">
+			<h1>Same Page Different Stylesheets</h1>
+			<p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
+			<a href="#" id="sheeT1" onclick="swapStyleSheet('../CSS/blueANDgreen.css')">Stylesheet1</a>
+			<a href="#" id="sheeT2" onclick="swapStyleSheet('../CSS/pinkANDred.css')">Stylesheet2</a>
+			<a href="#" id="sheeT3" onclick="swapStyleSheet('../CSS/greenANDblack.css')">Stylesheet3</a>
+			<a href="#" id="sheeT4" onclick="swapStyleSheet('../CSS/darkGreen.css')">Stylesheet4</a><br><br>
 			
-			<div class='addnoTeC'>
-				<div id='addnoTeB'>
-					<div id='arrowiT'></div>
-					<div id='arroW'></div>
-					<p>ADD NOTE</p></div>
-	</div></header>
+			<h1>No Styles</h1>
+			<p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:</p>
+			<a href="#" onclick="swapStyleSheet('defualt.css')">No Stylesheet</a></section>
 	
-	<div id='maiN'></div>
 	
-	<footer class='fooTer'>
- 			 
-		<div>
-			<i class="fas fa-mug-hot fa-3x"></i>
-			<h1 data-target='4000'></h1>
-			<p>Project Completed</p> </div>
-			
-		<div>
-			<i class="fas fa-users fa-3x"></i>
-			<h1 data-target='15000'></h1>
-			<p>Our Happy Clients</p> </div>
-			
-		<div>
-			<i class="fas fa-tasks fa-3x"></i>
-			<h1 data-target='500'></h1>
-			<p>OnGoing Projects</p> </div>
+	<section class="sideB"><h1>Side-Bar</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></section>
+	</main>
+	
+	<footer>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 	</footer>
+<!------------------------------------------------->	
+<script>
+		function swapStyleSheet(sheet){
+			document.getElementById('pageStyle').setAttribute('href', sheet);
+			checkStyle(sheet);}
+			
+		function checkStyle(N){
+			if(N=="../CSS/blueANDgreen.css"){
+				document.getElementById('sheeT1').setAttribute('onclick', ' ');
+				document.getElementById('sheeT2').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/pinkANDred.css")');
+				document.getElementById('sheeT3').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/greenANDblack.css")');
+				document.getElementById('sheeT4').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/darkGreen.css")');}
+			else if(N=="../CSS/pinkANDred.css"){
+				document.getElementById('sheeT1').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/blueANDgreen.css")');
+				document.getElementById('sheeT2').setAttribute('onclick', ' ');
+				document.getElementById('sheeT3').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/greenANDblack.css")');
+				document.getElementById('sheeT4').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/darkGreen.css")');}
+			else if(N=="../CSS/greenANDblack.css"){
+				document.getElementById('sheeT1').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/blueANDgreen.css")');
+				document.getElementById('sheeT2').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/pinkANDred.css")');
+				document.getElementById('sheeT3').setAttribute('onclick', ' ');
+				document.getElementById('sheeT4').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/darkGreen.css")');}
+			else if(N=='../CSS/darkGreen.css'){
+				document.getElementById('sheeT1').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/blueANDgreen.css")');
+				document.getElementById('sheeT2').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/pinkANDred.css")');
+				document.getElementById('sheeT3').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/greenANDblack.css")');
+				document.getElementById('sheeT4').setAttribute('onclick', ' ');}
+			else{
+				document.getElementById('sheeT1').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/blueANDgreen.css")');
+				document.getElementById('sheeT2').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/pinkANDred.css")');
+				document.getElementById('sheeT3').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/greenANDblack.css")');
+				document.getElementById('sheeT4').setAttribute
+				('onclick', 'swapStyleSheet("../CSS/darkGreen.css")');}}
+		
+		function swapAnchor(){
+			var a=document.getElementsByTagName('a');
+			for (var i=0; i< a.length; ++i){
+    				a[i].setAttribute("href", "#");}}
+	</script>	
 	
 	
-	<div id='noTeCe'><div class='noTe'</div>
-		<div class='closBuT'><i class="far fa-times-circle fa-2x"></i></div>
-		<textarea class='noTeH' placeholder="Title"></textarea> <hr/>
-		<textarea class='noTeB' placeholder="Write Here"></textarea></div>
-
-<script src='../Js-scripts/KeepNote.js'></script>	
-</body></html>
+	
+	
+	
+	
+	
+	
+</body></html> 
